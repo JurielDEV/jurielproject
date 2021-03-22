@@ -138,8 +138,11 @@ nav{
     .intro-text{
         animation: none;
     }
-    .logo-container img{
-        display: none;
+    .intro-text h1{
+        font-size: 34px;
+    }
+    .intro-text p{
+        font-size: 22px;
     }
 }
 .nav-active{
