@@ -219,5 +219,6 @@ nav{
     .picture img{
         width: 300px;
         height: 200px;
+        margin-top: 20px;
     }
 }
