@@ -205,6 +205,8 @@ nav{
     width: 600px;
 }
 @media screen and (max-width: 600px){
+    .about{
+        height: auto;
     .about-text h1{
         font-size: 30px;
     }
