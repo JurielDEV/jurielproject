@@ -210,13 +210,14 @@ nav{
     }
     .about-text h1{
         font-size: 30px;
+        margin-top: 20px;
     }
     .about-text p{
         font-size: 15px;
         line-height: 1.5;
         width: 300px;
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
     .picture img{
         width: 300px;
