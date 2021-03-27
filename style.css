@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    background: #00203f;
+    height: 10vh;
+    align-items: center;
+}
+.logo-container,.nav-links,.nav-link{
+    display: flex;
+    color: #adefd2;
+}
+.logo-container{
+    flex: 1;
+    margin: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    display: flex;
+    flex: .4;
+    align-items: center;
+}
+.nav-links{
+    justify-content: space-around;
+    letter-spacing: 3px;
+    font-weight: bold;
+    float: left;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-link{
+    font-size: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 12px;
+}
+.nav-link:hover {
+    background-color: #adefd2;
+    color: #00203f;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    display: flex;
+    width: 25px;
+    height: 3px;
+    background-color: #adefd2;
+    margin: 5px;
+    transition: all 0.3s ease-in;
+}
+.logo{
+    font-size: 25px;
+}
+.presentation{
+    display: flex;
+    width: 100%;
+    min-height: 90vh;
+    background-image: url('homebg.jpg');
+    background-size: 100% 100%;
+    align-items: center;
+}
+.introduction{
+    flex: 1;
+}
+.intro-text,.btn{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: white;
+}
+.intro-text{
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    text-shadow: 5px 5px 5px #00203f;
+}
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.intro-text h1{
+    font-size: 70px;
+}
+.intro-text p{
+    font-size: 30px;
+    margin-top: 5px;
+}
+.btn{
+    margin-top: 30px;
+}
+.btn-gstarted{
+    border: none;
+    background: #00203f;
+    color: #adefd2;
+    text-decoration: none;
+    padding: 22px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px;
+    list-style: none;
+}
+.btn-gstarted:hover{
+    background-color: #adefd2;
+    color: #00203f;
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #00203f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        opacity: 0;
+        transition: transform 0.5s ease-in;
+    }
+    .nav-link{
+        font-size: 12px;
+    }
+    .burger{
+        display: block;
+    }
+    .intro-text{
+        animation: none;
+    }
+    .intro-text h1{
+        font-size: 34px;
+    }
+    .intro-text p{
+        font-size: 22px;
+    }
+    .btn-gstarted{
+        width: 120px;
+        height: 60px;
+        font-size: 14px;
+    }
+}
+.nav-active{
+    opacity: 1;
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.about{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    background-color: #adefd2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%23adefd2'/%3E%3Cstop offset='1' stop-color='%2326f1ff'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%23a2efd1'/%3E%3Cstop offset='1' stop-color='%231bddfc'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%2397efd1'/%3E%3Cstop offset='1' stop-color='%2311c8f8'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%238cf0d1'/%3E%3Cstop offset='1' stop-color='%230ab1f1'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%2380f0d4'/%3E%3Cstop offset='1' stop-color='%230d97e0'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%2374f1d7'/%3E%3Cstop offset='1' stop-color='%230f7fd0'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%2368f3dc'/%3E%3Cstop offset='1' stop-color='%23116ac0'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%235cf5e3'/%3E%3Cstop offset='1' stop-color='%231358b1'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%234ff7eb'/%3E%3Cstop offset='1' stop-color='%231448a2'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%2341f9f4'/%3E%3Cstop offset='1' stop-color='%23153a93'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%2334f8fc'/%3E%3Cstop offset='1' stop-color='%23152e85'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%2326f1ff'/%3E%3Cstop offset='1' stop-color='%23152477'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg %3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.aboutme{
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.transparent{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("transpa2.png");
+    justify-content: space-evenly;
+}
+.about-text h1{
+    font-size: 50px;
+    background: -webkit-linear-gradient(#00203f, rgb(27, 63, 184));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-text p{
+    background: -webkit-linear-gradient(#00203f, rgb(27, 63, 184));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    line-height: 2;
+    text-align: justify;
+    text-indent: 50px;
+    width: 600px;
+}
+@media screen and (max-width: 1385px){
+    .about{
+        height: 90vh;
+    }
+    .aboutme{
+        height: 80vh;
+    }
+    .transparent{
+        margin-top: 50px;
+        height: 100%;
+        position: relative;
+    }
+    .about-text,.picture{
+        position: relative;
+    }
+}
+@media screen and (max-width: 768px){
+    .about{
+        height: 90vh;
+    }
+    .transparent{
+        background-color: none;
+        margin-top: 50px;
+        height: 65%;
+        width: 55%;
+    }
+    .about-text h1{
+        font-size: 25px;
+    }
+    .about-text p{
+        font-size: 12px;
+        line-height: 1.5;
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    .picture img{
+        width: 250px;
+        height: 150px;
+    }
+}
